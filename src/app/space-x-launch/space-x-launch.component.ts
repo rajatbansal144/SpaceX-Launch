@@ -12,6 +12,7 @@ export class SpaceXLaunchComponent implements OnInit {
 empty=true ;
   spaceData;
 spaceData2;
+step;
   ngOnInit() {
   
     this.service.getdata().subscribe((data)=>{
