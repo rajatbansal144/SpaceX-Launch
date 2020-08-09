@@ -1,0 +1,172 @@
+<div class="">
+
+  <div class="bg_color px-2">
+    <div>
+      <h2 class="heading">SpaceX Launch Programs</h2>
+    </div>
+  <div class="row m-0">
+    <div class="col_3 mt-3">
+      <div class="bg-white  ">
+        <h2 class="pl-2">Filters </h2>
+        <div class="px-2">
+          <div class="mt-4">
+            <div class="filter_headings   text-center">
+              <h3>Launch Year</h3>
+            </div>
+            <div class=" mx-auto width border_heading">
+            </div>
+
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step1'}" (click)="step='step1'"
+                 (click)="yearSort('2004')">2004</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step2'}" (click)="step='step2'"(click)="yearSort('2005')">2005</button>
+              </div>
+            </div>
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step3'}" (click)="step='step3'"(click)="yearSort(2006)">2006</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step4'}" (click)="step='step4'"(click)="yearSort('2007')">2007</button>
+              </div>
+            </div>
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step5'}" (click)="step='step5'"(click)="yearSort('2008')">2008</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step6'}" (click)="step='step6'" (click)="yearSort('2009')">2009</button>
+              </div>
+            </div>
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step7'}" (click)="step='step7'" (click)="yearSort('2010')">2010</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step8'}" (click)="step='step8'" (click)="yearSort('2011')">2011</button>
+              </div>
+            </div>
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step9'}" (click)="step='step9'"(click)="yearSort('2012')">2012</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0" [ngClass]="{'active': step==='step10'}" (click)="step='step10'"(click)="yearSort('2013')">2013</button>
+              </div>
+            </div>
+
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step11'}" (click)="step='step11'"(click)="yearSort('2014')">2014</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step12'}" (click)="step='step12'"(click)="yearSort('2015')">2015</button>
+              </div>
+            </div>
+
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step13'}" (click)="step='step13'"(click)="yearSort('2016')">2016</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step14'}" (click)="step='step14'"(click)="yearSort('2017')">2017</button>
+              </div>
+            </div>
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step15'}" (click)="step='step15'"(click)="yearSort('2018')">2018</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step16'}" (click)="step='step16'"(click)="yearSort('2019')">2019</button>
+              </div>
+            </div>
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0"[ngClass]="{'active': step==='step17'}" (click)="step='step17'"(click)="yearSort('2020')">2020</button>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="mt-4">
+            <div class="filter_headings   text-center">
+              <h3>Successful Launch</h3>
+            </div>
+            <div class=" mx-auto width border_heading">
+            </div>
+
+            <div class="row m-0 ">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color px-3 py-0"[ngClass]="{'active': step==='step18'}" (click)="step='step18'"(click)="launch(true)">True</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color px-3 py-0"[ngClass]="{'active': step==='step19'}" (click)="step='step19'"(click)="launch(false)">False</button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="filter_headings   text-center">
+              <h3>Successful Landing</h3>
+            </div>
+            <div class=" mx-auto width border_heading">
+            </div>
+
+            <div class="row m-0 mb-2">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color px-3 py-0"[ngClass]="{'active': step==='step20'}" (click)="step='step20'"(click)="land(true)">True</button>
+              </div>
+              <div class="col__6 pl-2 pb-3">
+                <button class="float-left mt-3 btn btn_color px-3 py-0"[ngClass]="{'active': step==='step21'}" (click)="step='step21'"(click)="land(false)">False</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+      <!-- <div class=""> -->
+      <div class="col_9">
+        <div *ngIf = "empty" class="row m-0">
+          <div *ngFor="let spaceData of spaceData; let i= index" class="col_6  px-2 mt-3 ">
+            <div class="bg-white">
+
+            <div class="p-2">
+              <div class="mt-2 text-center image_bg ">
+                <img src="{{spaceData.links.mission_patch}}"  width="100%" height="80%" alt="Rocket image">
+              </div>
+            </div>
+            <div class="pl-2">
+              <p class="mission_fw mission_color">{{spaceData.mission_name}}#{{spaceData.flight_number}}</p>
+              <p class="m-0 mission_fw">Mission Ids:</p>
+              <ul>
+                <div *ngFor="let idData of spaceData.mission_id;">
+                <li class="mission_color">{{idData}}</li>
+                </div>
+
+              </ul>
+              <p><span class="mission_fw">Launch Year:</span><span class="mission_color">{{spaceData.launch_year}}</span></p>
+              <p><span class="mission_fw">Successfull Launch:</span><span class="mission_color">{{spaceData.launch_success}}</span></p>
+              <p class="pb-5"><span class="mission_fw">Successfull Landing:</span>
+                <span *ngFor="let iData of spaceData.rocket.first_stage.cores" class="mission_color">{{iData.land_success}}</span></p>
+
+            </div>
+
+          </div>
+          </div>
+        </div>
+        <div *ngIf = "!empty">
+<h2 class="px-2 text-info mt-2">No Data, Please Select a Different value !!</h2>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="text-center">
+      <p class="m-0"><span class="mission_fw">Developed By:</span><span class="mission_color">Rajat Bansal</span></p>
+    </div>
+  </div>
+</div>

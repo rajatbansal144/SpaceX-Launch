@@ -1,0 +1,164 @@
+<div class="">
+
+  <div class="bg_color px-2">
+    <div>
+      <h2 class="heading">SpaceX Launch Programs</h2>
+    </div>
+  <div class="row m-0">
+    <div class="col_3">
+      <div class="bg-white  ">
+        <h2>Filters </h2>
+        <div class="px-2">
+          <div class="mt-4">
+            <div class="filter_headings   text-center">
+              <h3>Launch Year</h3>
+            </div>
+            <div class=" mx-auto width border_heading">
+            </div>
+
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0" (click)="yearSort('2014')">2004</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0">2005</button>
+              </div>
+            </div>
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0">2006</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0">2007</button>
+              </div>
+            </div>
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0">2008</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0">2009</button>
+              </div>
+            </div>
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0">2010</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0">2011</button>
+              </div>
+            </div>
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0">2012</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0">2013</button>
+              </div>
+            </div>
+
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0">2014</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0">2015</button>
+              </div>
+            </div>
+
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0">2016</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0">2017</button>
+              </div>
+            </div>
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0">2018</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color  py-0">2019</button>
+              </div>
+            </div>
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color  py-0">2020</button>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="mt-4">
+            <div class="filter_headings   text-center">
+              <h3>Successful Launch</h3>
+            </div>
+            <div class=" mx-auto width border_heading">
+            </div>
+
+            <div class="row m-0 px-5">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color px-3 py-0">True</button>
+              </div>
+              <div class="col__6 pl-2">
+                <button class="float-left mt-3 btn btn_color px-3 py-0">False</button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="filter_headings   text-center">
+              <h3>Successful Landing</h3>
+            </div>
+            <div class=" mx-auto width border_heading">
+            </div>
+
+            <div class="row m-0 px-5 mb-2">
+              <div class="col__6 pr-2">
+                <button class=" float-right mt-3 btn btn_color px-3 py-0">True</button>
+              </div>
+              <div class="col__6 pl-2 pb-3">
+                <button class="float-left mt-3 btn btn_color px-3 py-0">False</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+      <!-- <div class=""> -->
+      <div class="col_9">
+        <div class="row">
+          <div *ngFor="let spaceData of spaceData; let i= index" class="col-6  px-2 my-3 ">
+            <div class="bg-white">
+
+            <div class="p-2">
+              <div class="mt-2 text-center image_bg ">
+                <img src="{{spaceData.links.mission_patch}}"  width="100%" height="80%" alt="Rocket image">
+              </div>
+            </div>
+            <div>
+              <p class="mission_fw mission_color">{{spaceData.mission_name}}#{{spaceData.flight_number}}</p>
+              <p class="m-0 mission_fw">Mission Ids:</p>
+              <ul>
+                <div *ngFor="let idData of spaceData.mission_id; let i= index">
+                <li class="mission_color">{{idData}}</li>
+                </div>
+
+              </ul>
+              <p><span class="mission_fw">Launch Year:</span><span class="mission_color">{{spaceData.launch_year}}</span></p>
+              <p><span class="mission_fw">Successfull Launch:</span><span class="mission_color">{{spaceData.launch_success}}</span></p>
+              <p class="pb-5"><span class="mission_fw">Successfull Landing:</span><span class="mission_color">{{spaceData.land_success}}</span></p>
+
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
