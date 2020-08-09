@@ -5,6 +5,7 @@
       <h2 class="heading">SpaceX Launch Programs</h2>
     </div>
   <div class="row m-0">
+    <!-- Filters -->
     <div class="col_3 mt-3">
       <div class="bg-white  ">
         <h2 class="pl-2">Filters </h2>
@@ -129,7 +130,7 @@
         </div>
       </div>
     </div>
-      <!-- <div class=""> -->
+      <!-- mission Tiles -->
       <div class="col_9">
         <div *ngIf = "empty" class="row m-0">
           <div *ngFor="let spaceData of spaceData; let i= index" class="col_6  px-2 mt-3 ">
@@ -163,7 +164,7 @@
 <h2 class="px-2 text-info mt-2">No Data, Please Select a Different value !!</h2>
         </div>
       </div>
-      <!-- </div> -->
+    
     </div>
     <div class="text-center">
       <p class="m-0"><span class="mission_fw">Developed By:</span><span class="mission_color">Rajat Bansal</span></p>

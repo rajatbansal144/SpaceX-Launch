@@ -8,68 +8,55 @@ import { ServiceService } from '../service.service';
 })
 export class SpaceXLaunchComponent implements OnInit {
 
-  constructor(private service :ServiceService) { }
-empty=true ;
+  constructor(private service: ServiceService) { }
+  empty = true;
   spaceData;
-spaceData2;
-step;
+  spaceData2;
+  step;
   ngOnInit() {
-  
-    this.service.getdata().subscribe((data)=>{
- console.log(data)
-    this.spaceData= data;
-   console.log(this.spaceData)
-   this.spaceData2 = this.spaceData;
-  });
-  
- 
-}
-  
-  yearSort(year){
-    this.spaceData = this.spaceData2;
-   
-    let yearFilter = this.spaceData.filter(function(data) {
 
-      console.log(data.launch_year)
-      return data.launch_year == year;
+    this.service.getdata().subscribe((data) => {
+      console.log(data)
+      this.spaceData = data;
+      console.log(this.spaceData)
+      this.spaceData2 = this.spaceData;
     });
-    if(yearFilter != ''){
-     this.spaceData= yearFilter;
-    this.empty = true;
+
+
+  }
+// Year Sort Filter
+  yearSort(year) {
+    this.spaceData = this.spaceData2;
+    let yearFilter = this.spaceData.filter(function (data) {
+       return data.launch_year == year;
+    });
+    if (yearFilter != '') {
+      this.spaceData = yearFilter;
+      this.empty = true;
     }
-    if(yearFilter == ''){
-      
-     this.empty = false;
-     
-     }
-    
+    if (yearFilter == '') {
+      this.empty = false;
+    }
+
   }
 
-  launch(value){
-    console.log(value)
+// Launch Success Filter
+  launch(value) {
     this.spaceData = this.spaceData2;
-    let launchFilter = this.spaceData.filter(function(data1) {
- 
-      return  data1.launch_success == value;
-    
+    let launchFilter = this.spaceData.filter(function (data1) {
+      return data1.launch_success == value;
     });
-   
-    this.spaceData= launchFilter;
+    this.spaceData = launchFilter;
   }
 
-   land(value){
-    console.log(value)
+// Landing Success Filter
+  land(value) {
     this.spaceData = this.spaceData2;
-    let i =0;
-    let landFilter = this.spaceData.filter(function(data1) {
-
-      return  data1.rocket.first_stage.cores[i].land_success == value;
-    
+    let i = 0;
+    let landFilter = this.spaceData.filter(function (data1) {
+      return data1.rocket.first_stage.cores[i].land_success == value;
     });
-   i++;
-    this.spaceData= landFilter;
+    i++;
+    this.spaceData = landFilter;
   }
-
-
-
 }
