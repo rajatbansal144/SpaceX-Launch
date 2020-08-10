@@ -42,6 +42,7 @@ export class SpaceXLaunchComponent implements OnInit {
 
 // Launch Success Filter
   launch(value) {
+    this.empty = true;
     this.spaceData = this.spaceData2;
     let launchFilter = this.spaceData.filter(function (data1) {
       return data1.launch_success == value;
@@ -51,6 +52,7 @@ export class SpaceXLaunchComponent implements OnInit {
 
 // Landing Success Filter
   land(value) {
+    this.empty = true;
     this.spaceData = this.spaceData2;
     let i = 0;
     let landFilter = this.spaceData.filter(function (data1) {
